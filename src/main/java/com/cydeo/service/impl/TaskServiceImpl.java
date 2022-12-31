@@ -1,7 +1,9 @@
 package com.cydeo.service.impl;
 
+import com.cydeo.dto.ProjectDTO;
 import com.cydeo.dto.TaskDTO;
 import com.cydeo.entity.Task;
+import com.cydeo.entity.User;
 import com.cydeo.enums.Status;
 import com.cydeo.mapper.TaskMapper;
 import com.cydeo.repository.TaskRepository;
@@ -83,5 +85,35 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public int totalCompletedTask(String projectCode) {
         return taskRepository.totalCompletedTasks(projectCode);
+    }
+
+    @Override
+    public void deleteByProject(ProjectDTO project) {
+
+    }
+
+    @Override
+    public void completeByProject(ProjectDTO project) {
+
+    }
+
+    @Override
+    public List<TaskDTO> listAllTasksByStatusIsNot(Status status) {
+        return null;
+    }
+
+    @Override
+    public void updateStatus(TaskDTO task) {
+
+    }
+
+    @Override
+    public List<TaskDTO> listAllTasksByStatus(Status status) {
+        return null;
+    }
+
+    @Override
+    public List<TaskDTO> readAllByAssignedEmployee(User assignedEmployee) {
+        return null;
     }
 }
